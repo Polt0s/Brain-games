@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-import userName from "/Users/work/frontend-project-lvl1/src/cli.js";
+import userName from '../src/cli.js';
+console.log(`${'Hello,'} ${userName}${'!'}`);
