@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "main": "src/cli.js",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
