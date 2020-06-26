@@ -1,10 +1,8 @@
 extends:
-  - "airbnb-base"
+  - 'airbnb-base'
 
 env:
   node: true
   browser: true
 
-rules:
-  no-console: 0
-  import/extensions: 0
+rules: { 'no-console': 'off', 'import/extensions': 'off' }
