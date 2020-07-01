@@ -6,12 +6,17 @@
 
 # Games Description
 
-## Game: Parity Check
+## Game: "Parity Check"
 
 The essence of the game is as follows: need to answer "YES" if the number is even, and "No" if odd.
 
-## Launch the game
+## Game: "Calculator"
+
+The essence of the game is as follows: a random mathematical expression is shown, for example 35 + 16, which you need to calculate and write the correct answer.
+
+# Launch the game
 
 ```
 $make brain-even
+$make brain-calc
 ```
