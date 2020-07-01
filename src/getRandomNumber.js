@@ -1,6 +1,6 @@
 const getRandomNumber = () => {
-  let min = 1;
-  let max = 20;
+  const min = 1;
+  const max = 20;
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
