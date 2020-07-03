@@ -3,14 +3,16 @@ import userName from '../cli.js';
 import getRandomNumber from '../getRandomNumber.js';
 
 const getLargestCommonFactor = (num1, num2) => {
-  while (num1 !== num2) {
-    if (num1 > num2) {
-      num1 -= num2;
+  let sum1 = num1;
+  let sum2 = num2;
+  while (sum1 !== sum2) {
+    if (sum1 > sum2) {
+      sum1 -= sum2;
     } else {
-      num2 -= num1;
+      sum2 -= sum1;
     }
   }
-  return num1;
+  return sum1;
 };
 getLargestCommonFactor();
 
