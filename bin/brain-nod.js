@@ -3,4 +3,3 @@
 import runGame from '../src/games/nod.js';
 
 runGame();
-

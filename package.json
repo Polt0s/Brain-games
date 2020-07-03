@@ -8,8 +8,8 @@
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
-    "brain-prime": "bin/brain-prime.js",
-    "brain-nod": "bin/brain-nod.js"
+    "brain-nod": "bin/brain-nod.js",
+    "brain-prime": "bin/brain-prime.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
