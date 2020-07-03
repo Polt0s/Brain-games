@@ -14,9 +14,14 @@ The essence of the game is as follows: need to answer "YES" if the number is eve
 
 The essence of the game is as follows: a random mathematical expression is shown, for example 35 + 16, which you need to calculate and write the correct answer.
 
+## Game: "Calculator"
+
+The essence of the game is as follows: two random numbers are shown, for example, 25 50. The player must calculate and enter the largest common divisor of these numbers.
+
 # Launch the game
 
 ```
 $make brain-even
 $make brain-calc
+$make brain-nod
 ```
