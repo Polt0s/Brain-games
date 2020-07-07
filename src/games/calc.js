@@ -34,9 +34,7 @@ const runGame = () => {
           break;
         }
       } else {
-        if (askQuestion != sumOfExpression) {
-          console.log(`${askQuestion} is wrong answer ;(. Correct answer was ${sumOfExpression}.`);
-        }
+        console.log(`${askQuestion} is wrong answer ;(. Correct answer was ${sumOfExpression}.`);
         console.log(`Let's try again, ${userName}!`);
         counter = 0;
       }
