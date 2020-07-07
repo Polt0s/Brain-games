@@ -7,7 +7,7 @@ const runGame = () => {
   const getIsAnswer = () => {
     let counter = 0;
     while (counter <= 2) {
-      const randomNumberCall = getRandomNumber();
+      const randomNumberCall = getRandomNumber(1, 30);
       console.log(`Question: ${randomNumberCall}`);
       const askQuestion = readlineSync.question('Your answer: ');
       if ((askQuestion === 'yes' && randomNumberCall % 2 === 0) || (askQuestion === 'no' && randomNumberCall % 2 !== 0)) {

@@ -21,8 +21,8 @@ const runGame = () => {
   const getRandomCommonFactor = () => {
     let counter = 0;
     while (counter <= 2) {
-      const number = getRandomNumber();
-      const number2 = getRandomNumber();
+      const number = getRandomNumber(1, 50);
+      const number2 = getRandomNumber(1, 50);
       console.log(`Question: ${number} ${number2}`);
       const askQuestion = readlineSync.question('Your answer: ');
       const calculateNod = getLargestCommonFactor(number, number2);

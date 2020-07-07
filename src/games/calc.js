@@ -14,7 +14,7 @@ const runGame = () => {
   getRandomOperator(sing);
 
   const getRandomExpression = () => {
-    const sum = `${getRandomNumber()} ${getRandomOperator(sing)} ${getRandomNumber()}`;
+    const sum = `${getRandomNumber(1, 20)} ${getRandomOperator(sing)} ${getRandomNumber(1, 20)}`;
     return sum;
   };
   getRandomExpression();
