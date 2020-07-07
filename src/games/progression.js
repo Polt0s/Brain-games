@@ -37,11 +37,11 @@ const runGame = () => {
       } else {
         if (randomProgression.indexOf(!askQuestion)) {
           console.log(`${askQuestion} is wrong answer ;(. Correct answer was ${answer}.`);
-        };
+        }
         console.log(`Let's try again, ${userName}!`);
         counter = 0;
-      };
-    };
+      }
+    }
   };
   getRanmdomProgression();
 };

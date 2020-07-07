@@ -18,10 +18,15 @@ The essence of the game is as follows: a random mathematical expression is shown
 
 The essence of the game is as follows: two random numbers are shown, for example, 25 50. The player must calculate and enter the largest common divisor of these numbers.
 
+## Game: "Arithmetic progression"
+
+The essence of the game is as follows: a series of numbers is shown, forming an arithmetic progression, random number is replaced by two points. The player must determine this number.
+
 # Launch the game
 
 ```
 $make brain-even
 $make brain-calc
 $make brain-nod
+#make brain-progression
 ```
