@@ -26,7 +26,7 @@ const runGame = () => {
       console.log(`Question: ${number} ${number2}`);
       const askQuestion = readlineSync.question('Your answer: ');
       const calculateNod = getLargestCommonFactor(number, number2);
-      if (askQuestion == calculateNod) {
+      if (Number(askQuestion) === calculateNod) {
         console.log('Correct!');
         counter += 1;
         if (counter === 3) {

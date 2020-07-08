@@ -26,7 +26,7 @@ const runGame = () => {
       console.log(`Question: ${result}`);
       const askQuestion = readlineSync.question('Your answer: ');
       const sumOfExpression = eval(result);
-      if (askQuestion == sumOfExpression) {
+      if (Number(askQuestion) === sumOfExpression) {
         console.log('Correct!');
         counter += 1;
         if (counter === 3) {

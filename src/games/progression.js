@@ -27,7 +27,7 @@ const runGame = () => {
       const answer = oneElement + stepElement * hiddenElementNum;
       console.log(`Question: ${randomProgression}`);
       const askQuestion = readlineSync.question('Your answer: ');
-      if (askQuestion == answer) {
+      if (Number(askQuestion) === answer) {
         console.log('Correct!');
         counter += 1;
         if (counter === 3) {
