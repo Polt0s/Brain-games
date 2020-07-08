@@ -32,6 +32,6 @@ The essence of the game is as follows: a number is shown, the player needs to an
 $make brain-even
 $make brain-calc
 $make brain-nod
-#make brain-progression
+$make brain-progression
 $make brain-prime
 ```

@@ -12,7 +12,7 @@ const getRandomPrimeNumber = (number) => {
     }
   }
   return 'yes';
-}
+};
 
 const runGame = () => {
   const getPrimeNumber = () => {
@@ -36,7 +36,7 @@ const runGame = () => {
         counter = 0;
       }
     }
-  }
+  };
   getPrimeNumber();
-}
+};
 export default runGame;
