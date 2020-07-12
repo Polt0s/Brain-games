@@ -1,6 +1,7 @@
-import readlineSync from 'readline-sync';
-import userName from '../cli.js';
 import getRandomNumber from '../getRandomNumber.js';
+import getNewGame from '../cli.js';
+
+const regulations = 'What number is missing in the progression?';
 
 const getProgression = (firstElement, step, hiddenElement) => {
   const Array = [];
@@ -15,32 +16,17 @@ const getProgression = (firstElement, step, hiddenElement) => {
   return Array.join(' ');
 };
 
-const runGame = () => {
-  console.log('What number is missing in the progression?');
-  const getRanmdomProgression = () => {
-    let counter = 0;
-    while (counter <= 2) {
-      const oneElement = getRandomNumber(1, 5);
-      const stepElement = getRandomNumber(1, 5);
-      const hiddenElementNum = getRandomNumber(1, 5);
-      const randomProgression = getProgression(oneElement, stepElement, hiddenElementNum);
-      const answer = oneElement + stepElement * hiddenElementNum;
-      console.log(`Question: ${randomProgression}`);
-      const askQuestion = readlineSync.question('Your answer: ');
-      if (Number(askQuestion) === answer) {
-        console.log('Correct!');
-        counter += 1;
-        if (counter === 3) {
-          console.log(`Congratulations, ${userName}!`);
-          break;
-        }
-      } else {
-        console.log(`${askQuestion} is wrong answer ;(. Correct answer was ${answer}.`);
-        console.log(`Let's try again, ${userName}!`);
-        counter = 0;
-      }
-    }
-  };
-  getRanmdomProgression();
+const getGameData = () => {
+  const oneElement = getRandomNumber(1, 5);
+  const stepElement = getRandomNumber(1, 5);
+  const hiddenElementNumber = getRandomNumber(1, 5);
+  const askQuestion = getProgression(oneElement, stepElement, hiddenElementNumber);
+  const askAnswer = String(oneElement + stepElement * hiddenElementNumber);
+  return { question: askQuestion, answer: askAnswer };
 };
-export default runGame;
+
+const startProgressionGame = () => {
+  getNewGame(getGameData, regulations);
+};
+
+export default startProgressionGame;
