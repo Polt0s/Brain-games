@@ -11,12 +11,14 @@ const sing = ['*', '-', '+'];
 getRandomOperator(sing);
 
 const getAnswer = (x, y, operator) => {
-  if (operator === '+') {
-    return String(x + y);
-  } else if (operator === '-') {
-    return String(x - y);
-  } else {
-    return String(x * y);
+  switch (operator) {
+    case '+':
+      return String(x + y);
+    case '-':
+      return String(x - y);
+    case '*':
+      return String(x * y);
+    default:
   }
 };
 
@@ -27,12 +29,10 @@ const getGameData = () => {
   const askQuestion = `${randomNum1} ${randomOperator} ${randomNum2}`
   const askAnswer = getAnswer(randomNum1, randomNum2, randomOperator);
   return { question: askQuestion, answer: askAnswer };
-}
+};
 
 const startCalcGame = () => {
   getNewGame(getGameData, regulations);
-}
+};
 
 export default startCalcGame;
-
-

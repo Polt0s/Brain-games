@@ -4,10 +4,11 @@ import getNewGame from '../cli.js';
 const regulations = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getEvenNumber = (number) => {
-  if (number % 2 === 0) {
-    return 'yes';
-  } else {
-    return 'no';
+  switch (number) {
+    case number % 2 === 0:
+      return 'yes';
+    default:
+      return 'no';
   }
 };
 

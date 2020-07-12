@@ -9,7 +9,7 @@ const getNewGame = (newGame, regulations) => {
   while (counter <= 2) {
     const { question: askQuestion, answer: askAnswer } = newGame();
     console.log(`Question: ${askQuestion} `);
-    const getAnswer = readlineSync.question(`Your answer: `);
+    const getAnswer = readlineSync.question('Your answer: ');
     if (getAnswer === askAnswer) {
       console.log('Correct!');
       counter += 1;
@@ -23,5 +23,5 @@ const getNewGame = (newGame, regulations) => {
       counter = 0;
     }
   }
-}
+};
 export default getNewGame;
