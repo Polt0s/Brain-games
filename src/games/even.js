@@ -1,10 +1,12 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playNewGame from '../cli.js';
 
 const regulations = 'Answer "yes" if the number is even, otherwise answer "no".';
+const MIN_VALUE = 1;
+const MAX_VALUE = 30;
 
-const getEvenNumber = (number) => {
-  switch (number) {
+const checkTheNumberForEven = (number) => {
+  switch (true) {
     case number % 2 === 0:
       return 'yes';
     default:
@@ -13,13 +15,13 @@ const getEvenNumber = (number) => {
 };
 
 const getGameData = () => {
-  const askQuestion = getRandomNumber(1, 20);
-  const askAnswer = getEvenNumber(askQuestion);
-  return { question: askQuestion, answer: askAnswer };
+  const question = getRandomNumber(MIN_VALUE, MAX_VALUE);
+  const answer = checkTheNumberForEven(askQuestion);
+  return { question, answer };
 };
 
 const startEvenGame = () => {
-  getNewGame(getGameData, regulations);
+  playNewGame(getGameData, regulations);
 };
 
 export default startEvenGame;

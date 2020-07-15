@@ -1,32 +1,36 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playNewGame from '../cli.js';
 
 const regulations = 'What number is missing in the progression?';
 
-const getProgression = (firstElement, step, hiddenElement) => {
-  const Array = [];
-  for (let i = 0; i < 10; i += 1) {
+const LENGTH_PROGRESSION = 10;
+const MIN_VALUE = 1;
+const MAX_VALUE = 5;
+
+const getProgression = (firstElement, step) => {
+  const progressionArray = [];
+  for (let i = 0; i < LENGTH_PROGRESSION; i += 1) {
     const element = firstElement + step * i;
-    if (i === hiddenElement) {
-      Array.push('..');
-    } else {
-      Array.push(element);
-    }
+    progressionArray.push(element);
   }
-  return Array.join(' ');
+  return progressionArray;
 };
 
+
 const getGameData = () => {
-  const oneElement = getRandomNumber(1, 5);
-  const stepElement = getRandomNumber(1, 5);
-  const hiddenElementNumber = getRandomNumber(1, 5);
-  const askQuestion = getProgression(oneElement, stepElement, hiddenElementNumber);
-  const askAnswer = String(oneElement + stepElement * hiddenElementNumber);
-  return { question: askQuestion, answer: askAnswer };
+  const firstElement = getRandomNumber(MIN_VALUE, MAX_VALUE);
+  const step = getRandomNumber(MIN_VALUE, MAX_VALUE);
+  const progression = getProgression(firstElement, step);
+  const hiddenElementNumber = getRandomNumber(0, progression.length - 1);
+  const hiddenIndex = progression[hiddenElementNumber];
+  progression[hiddenElementNumber] = '..';
+  const question = progression.join(' ');
+  const answer = String(hiddenIndex);
+  return { question, answer };
 };
 
 const startProgressionGame = () => {
-  getNewGame(getGameData, regulations);
+  playNewGame(getGameData, regulations);
 };
 
 export default startProgressionGame;

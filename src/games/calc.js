@@ -1,14 +1,15 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playNewGame from '../cli.js';
 
 const regulations = 'What is the result of the expression?';
+const MIN_VALUE = 1;
+const MAX_VALUE = 20;
 
-const getRandomOperator = (sing) => {
-  const array = Math.floor(Math.random() * sing.length);
-  return sing[array];
+const getRandomOperator = (isOperator) => {
+  const array = Math.floor(Math.random() * isOperator.length);
+  return isOperator[array];
 };
-const sing = ['*', '-', '+'];
-getRandomOperator(sing);
+const isOperator = ['*', '-', '+'];
 
 const getAnswer = (x, y, operator) => {
   switch (operator) {
@@ -22,16 +23,16 @@ const getAnswer = (x, y, operator) => {
 };
 
 const getGameData = () => {
-  const randomNum1 = getRandomNumber(1, 10);
-  const randomNum2 = getRandomNumber(1, 10);
-  const randomOperator = getRandomOperator(sing);
-  const askQuestion = `${randomNum1} ${randomOperator} ${randomNum2}`;
-  const askAnswer = getAnswer(randomNum1, randomNum2, randomOperator);
-  return { question: askQuestion, answer: askAnswer };
+  const firstRandomNumber = getRandomNumber(MIN_VALUE, MAX_VALUE);
+  const secondRandomNumber = getRandomNumber(MIN_VALUE, MAX_VALUE);
+  const randomOperator = getRandomOperator(isOperator);
+  const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+  const answer = getAnswer(firstRandomNumber, secondRandomNumber, randomOperator);
+  return { question, answer };
 };
 
 const startCalcGame = () => {
-  getNewGame(getGameData, regulations);
+  playNewGame(getGameData, regulations);
 };
 
 export default startCalcGame;

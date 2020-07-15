@@ -1,28 +1,28 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playNewGame from '../cli.js';
 
 const regulations = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getRandomPrimeNumber = (number) => {
+const isPrime = (number) => {
   if (number < 2) {
-    return 'no';
+    return false;
   }
   for (let i = 2; i <= number / 2; i += 1) {
     if (number % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const getGameData = () => {
-  const askQuestion = getRandomNumber(1, 20);
-  const askAnswer = getRandomPrimeNumber(askQuestion);
-  return { question: askQuestion, answer: askAnswer };
+  const question = getRandomNumber(1, 20);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return { question, answer };
 };
 
 const startPrimeGame = () => {
-  getNewGame(getGameData, regulations);
+  playNewGame(getGameData, regulations);
 };
 
 export default startPrimeGame;
