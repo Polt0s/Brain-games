@@ -16,7 +16,7 @@ const checkTheNumberForEven = (number) => {
 
 const getGameData = () => {
   const question = getRandomNumber(MIN_VALUE, MAX_VALUE);
-  const answer = checkTheNumberForEven(askQuestion);
+  const answer = checkTheNumberForEven(question);
   return { question, answer };
 };
 

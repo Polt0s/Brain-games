@@ -16,7 +16,6 @@ const getProgression = (firstElement, step) => {
   return progressionArray;
 };
 
-
 const getGameData = () => {
   const firstElement = getRandomNumber(MIN_VALUE, MAX_VALUE);
   const step = getRandomNumber(MIN_VALUE, MAX_VALUE);
