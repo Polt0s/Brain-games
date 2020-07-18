@@ -20,8 +20,8 @@ const getGameData = () => {
   return { question, answer };
 };
 
-const startNodGame = () => {
+const startGcdGame = () => {
   playNewGame(getGameData, regulations);
 };
 
-export default startNodGame;
+export default startGcdGame;

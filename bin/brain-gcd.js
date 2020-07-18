@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import startNodGame from '../src/games/gcd.js';
+import startGcdGame from '../src/games/gcd.js';
 
-startNodGame();
+startGcdGame();
