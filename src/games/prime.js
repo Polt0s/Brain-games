@@ -1,7 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
-import playNewGame from '../cli.js';
+import getNewGame from '../cli.js';
 
-const regulations = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const REGULATIONS = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const MIN_VALUE = 1;
 const MAX_VALUE = 25;
 
@@ -24,7 +24,7 @@ const getGameData = () => {
 };
 
 const startPrimeGame = () => {
-  playNewGame(getGameData, regulations);
+  getNewGame(getGameData, REGULATIONS);
 };
 
 export default startPrimeGame;
