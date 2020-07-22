@@ -1,10 +1,14 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playGame from '../cli.js';
 
 const REGULATIONS = 'What number is missing in the progression?';
 
 const MIN_VALUE = 1;
 const MAX_VALUE = 5;
+const MIN_PROGRESSION_START_VALUE = 1;
+const MAX_PROGRESSION_START_VALUE = 5;
+const LENGTH_PROGRESSION = 10;
+
 
 const getProgression = (firstElement, step, lengthProgression) => {
   const progressionArray = [];
@@ -17,9 +21,8 @@ const getProgression = (firstElement, step, lengthProgression) => {
 
 const getGameData = () => {
   const firstElement = getRandomNumber(MIN_VALUE, MAX_VALUE);
-  const step = getRandomNumber(MIN_VALUE, MAX_VALUE);
-  const lengthProgression = 10;
-  const progression = getProgression(firstElement, step, lengthProgression);
+  const step = getRandomNumber(MIN_PROGRESSION_START_VALUE, MAX_PROGRESSION_START_VALUE);
+  const progression = getProgression(firstElement, step, LENGTH_PROGRESSION);
   const hiddenElement = getRandomNumber(0, progression.length - 1);
   const hiddenIndex = progression[hiddenElement];
   progression[hiddenElement] = '..';
@@ -29,7 +32,7 @@ const getGameData = () => {
 };
 
 const startProgressionGame = () => {
-  getNewGame(getGameData, REGULATIONS);
+  playGame(getGameData, REGULATIONS);
 };
 
 export default startProgressionGame;

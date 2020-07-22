@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playGame from '../cli.js';
 
 const REGULATIONS = 'Find the greatest common divisor of given numbers.';
 const MIN_VALUE = 1;
@@ -21,7 +21,7 @@ const getGameData = () => {
 };
 
 const startGcdGame = () => {
-  getNewGame(getGameData, REGULATIONS);
+  playGame(getGameData, REGULATIONS);
 };
 
 export default startGcdGame;

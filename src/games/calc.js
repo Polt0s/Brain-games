@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playGame from '../cli.js';
 
 const REGULATIONS = 'What is the result of the expression?';
 const MIN_VALUE = 1;
@@ -30,7 +30,7 @@ const getGameData = () => {
 };
 
 const startCalcGame = () => {
-  getNewGame(getGameData, REGULATIONS);
+  playGame(getGameData, REGULATIONS);
 };
 
 export default startCalcGame;

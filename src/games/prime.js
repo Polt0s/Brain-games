@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-import getNewGame from '../cli.js';
+import playGame from '../cli.js';
 
 const REGULATIONS = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const MIN_VALUE = 1;
@@ -24,7 +24,7 @@ const getGameData = () => {
 };
 
 const startPrimeGame = () => {
-  getNewGame(getGameData, REGULATIONS);
+  playGame(getGameData, REGULATIONS);
 };
 
 export default startPrimeGame;
