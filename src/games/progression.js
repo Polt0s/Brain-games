@@ -9,7 +9,6 @@ const MIN_PROGRESSION_START_VALUE = 1;
 const MAX_PROGRESSION_START_VALUE = 5;
 const LENGTH_PROGRESSION = 10;
 
-
 const getProgression = (firstElement, step, lengthProgression) => {
   const progressionArray = [];
   for (let i = 0; i < lengthProgression; i += 1) {
