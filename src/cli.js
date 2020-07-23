@@ -2,11 +2,11 @@ import readlineSync from 'readline-sync';
 
 const COUNT = 3;
 
-const playGame = (getGameData, regulations) => {
+const playGame = (getGameData, rules) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(regulations);
+  console.log(rules);
   let counter = 0;
   while (counter < COUNT) {
     const { question, answer } = getGameData();

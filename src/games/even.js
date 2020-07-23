@@ -1,7 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
 import playGame from '../cli.js';
 
-const REGULATIONS = 'Answer "yes" if the number is even, otherwise answer "no".';
+const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 const MIN_VALUE = 1;
 const MAX_VALUE = 30;
 
@@ -14,7 +14,7 @@ const getGameData = () => {
 };
 
 const startEvenGame = () => {
-  playGame(getGameData, REGULATIONS);
+  playGame(getGameData, RULES);
 };
 
 export default startEvenGame;
